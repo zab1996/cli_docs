@@ -47,7 +47,7 @@ Select your platform below. All methods install the same app — only the steps 
     **Quick steps:**
 
     ```bash
-    mkdir -p ~/cli_debrid && cd ~/cli_debrid
+    mkdir -p ~/clyde && cd ~/clyde
     curl -O https://raw.githubusercontent.com/godver3/cli_debrid/dev/docker-compose.yml
     # Edit docker-compose.yml — update volume paths and timezone
     docker compose up -d

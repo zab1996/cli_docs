@@ -39,8 +39,8 @@ docker compose version
 ## Step 2 — Create directories
 
 ```bash
-mkdir -p ~/cli_debrid/{db_content,config,logs}
-cd ~/cli_debrid
+mkdir -p ~/clyde/{db_content,config,logs}
+cd ~/clyde
 ```
 
 ---
@@ -65,9 +65,9 @@ Paste:
           - "5000:5000"
           - "5001:5001"
         volumes:
-          - ~/cli_debrid/db_content:/user/db_content
-          - ~/cli_debrid/config:/user/config
-          - ~/cli_debrid/logs:/user/logs
+          - ~/clyde/db_content:/user/db_content
+          - ~/clyde/config:/user/config
+          - ~/clyde/logs:/user/logs
           - /path/to/your/debrid/mount:/media/mount          # e.g. /mnt/zurg, /mnt/data/debrid
           - /path/to/plex/Library/Application Support/Plex Media Server:/plex_data  # optional — overlay feature
         environment:
@@ -90,9 +90,9 @@ Paste:
           - "5000:5000"
           - "5001:5001"
         volumes:
-          - ~/cli_debrid/db_content:/user/db_content
-          - ~/cli_debrid/config:/user/config
-          - ~/cli_debrid/logs:/user/logs
+          - ~/clyde/db_content:/user/db_content
+          - ~/clyde/config:/user/config
+          - ~/clyde/logs:/user/logs
           - /path/to/your/debrid/mount:/media/mount          # e.g. /mnt/zurg, /mnt/data/debrid — must match media server
           - /path/to/your/symlinks:/mnt/symlinked            # e.g. /mnt/symlinks — must match media server
           - /path/to/plex/Library/Application Support/Plex Media Server:/plex_data  # optional — overlay feature, Plex only
@@ -135,7 +135,7 @@ Complete the onboarding wizard. See [Step 4 — Configure](../getting-started/co
 ## Updating
 
 ```bash
-cd ~/cli_debrid
+cd ~/clyde   # ~/cli_debrid if you installed before 0.9.0
 docker compose pull && docker compose up -d
 ```
 

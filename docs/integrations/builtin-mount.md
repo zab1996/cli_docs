@@ -33,7 +33,7 @@ flowchart LR
 The engine mounts its files inside the Clyde container with FUSE. The container needs FUSE access, and the mount folder has to be shared with the host so your media server can see it. The ready-made compose file has all of that:
 
 ```bash
-mkdir -p ${HOME}/cli_debrid && cd ${HOME}/cli_debrid
+mkdir -p ${HOME}/clyde && cd ${HOME}/clyde
 curl -o docker-compose.yml https://raw.githubusercontent.com/godver3/cli_debrid/dev/docker-compose.builtin.yml
 docker compose up -d
 ```

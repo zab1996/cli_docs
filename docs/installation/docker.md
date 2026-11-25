@@ -52,7 +52,7 @@ Every tag is multi-arch: the same tag works on amd64 and arm64 (Raspberry Pi, Ap
 Clyde's [built-in mount](../integrations/builtin-mount.md) streams your debrid account and your Usenet server from inside the Clyde container. This needs a Linux host running Docker Engine.
 
 ```bash
-mkdir -p ${HOME}/cli_debrid && cd ${HOME}/cli_debrid
+mkdir -p ${HOME}/clyde && cd ${HOME}/clyde
 curl -o docker-compose.yml https://raw.githubusercontent.com/godver3/cli_debrid/dev/docker-compose.builtin.yml
 docker compose up -d
 ```
@@ -86,7 +86,7 @@ cli_mount runs as user `1000` (the `PUID` in the compose file) and can only moun
 ### 2. Create the compose file
 
 ```bash
-mkdir -p ${HOME}/cli_debrid && cd ${HOME}/cli_debrid
+mkdir -p ${HOME}/clyde && cd ${HOME}/clyde
 curl -o docker-compose.yml https://raw.githubusercontent.com/godver3/cli_debrid/dev/docker-compose.cli_mount.yml
 ```
 
@@ -261,8 +261,8 @@ Use this if you already have a mount, or use Zurg, Decypharr or NzbDAV.
 Create a directory to store Clyde's data:
 
 ```bash
-mkdir -p ${HOME}/cli_debrid
-cd ${HOME}/cli_debrid
+mkdir -p ${HOME}/clyde
+cd ${HOME}/clyde
 ```
 
 ---
